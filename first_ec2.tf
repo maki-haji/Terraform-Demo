@@ -4,12 +4,11 @@ provider "aws" {
   secret_key = "hzKqzNTywVPPza1VXf2RurKDVYMItogesE0lac9A"
 }
 
-resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
+resource "aws_instance" "My-ec2" {
+  ami           = ami-0eb260c4d5475b901
   instance_type = "t2.micro"
-    ami = "ami-0eb260c4d5475b901"
 
   tags = {
-    Name = "First Instance"
+    Name = "Hellow Soomaalia"
   }
 }
